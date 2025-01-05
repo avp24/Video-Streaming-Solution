@@ -1,0 +1,35 @@
+For This Video Streaming Solution have used Ubuntu 22.04 as Host OS & used webcam for verification.
+Note : It is recommended to check this solution on GPU enabled system as we are using Yolo based AI inference for object detection
+which requires GPU for better performance.
+
+Environment Setup : 
+a) Install packages like ffmpeg.
+b) Install Anaconda to create Virtual Environment so that it does not affect the main system environment.
+   Link : 
+	https://docs.anaconda.com/anaconda/install/#manual-shell-init-linux
+
+   Follow the installation instructions mentioned in the link to install and configure anaconda.
+   I have considered Linux (Ubuntu 22.04) as my host environment. You can install version as per your Host OS.
+
+   Steps to Create & Configure Virtual Environment :
+   Open a Terminal & Enter below commands -
+   1) source ~/anaconda3/bin/activate (This path may vary based on the installation path selected for anaconda)
+   2) conda create --name <name_of_env> python=3.11 (It will ask to install some package, select y)
+   3) conda activate <name_of_env>
+   4) mkdir -p ~/projects && cd ~/projects
+   5) git clone https://github.com/avp24/Video-Streaming-Solution.git
+   6) cd video_streaming_solution
+   7) pip install -r requirements.txt
+   8) pip install ultralytics (This command will take some time as it will be installing all the packages w.r.t yolov8 for Class Detections 
+      on Camera Stream)
+   9) pip install websockets
+
+Note : Environment Creation steps have to be executed once. After Virtual Environment configuration whenever a new terminal is opened enter commands -
+--> source ~/anaconda3/bin/activate
+--> conda activate <name_of_env> (Can use conda env list to check if multiple environments are created) 
+Execute Application :
+1) cd ~/projects/video_streaming_solution
+2) python main.py
+It will start the script and http server will start on port 8088
+3) Open browser and navigate to <ip_address>:8088 or 127.0.0.1:8088.
+You should be able to see Live Stream with Object Detection enabled.
