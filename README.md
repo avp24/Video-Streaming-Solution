@@ -35,7 +35,7 @@ b) Install Anaconda to create Virtual Environment so that it does not affect the
    3) conda activate <name_of_env>
    4) mkdir -p ~/projects && cd ~/projects
    5) git clone https://github.com/avp24/Video-Streaming-Solution.git
-   6) cd video_streaming_solution
+   6) cd Video-Streaming-Solution
    7) pip install -r requirements.txt
    8) pip install ultralytics (This command will take some time as it will be installing all the packages w.r.t yolov8 for Class Detections 
       on Camera Stream)
