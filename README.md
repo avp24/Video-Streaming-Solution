@@ -39,7 +39,11 @@ b) Install Anaconda to create Virtual Environment so that it does not affect the
    7) pip install -r requirements.txt
    8) pip install ultralytics (This command will take some time as it will be installing all the packages w.r.t yolov8 for Class Detections 
       on Camera Stream)
-   9) pip install websockets
+   9) Install torch & torchvision to get GPU enabled for virtual environment.
+      pip install torch-2.4.0+cu124-cp311-cp311-linux_x86_64.whl
+      pip install torchvision-0.19.0+cu124-cp311-cp311-linux_x86_64.whl
+      pip install torchaudio-2.4.0+cu124-cp311-cp311-linux_x86_64.whl
+   10) pip install websockets
 
 **Note :** Environment Creation steps have to be executed once. 
 After Virtual Environment configuration whenever a new terminal is opened enter commands -

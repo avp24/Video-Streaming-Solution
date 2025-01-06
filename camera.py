@@ -35,7 +35,7 @@ class Camera:
             x1, y1, x2, y2 = map(int, box.xyxy[0])  # Bounding box coordinates
             conf = box.conf[0]  # Confidence
             cls = int(box.cls[0])  # Class ID
-            print(f"Detected {self.yolo_model.names[cls]} with confidence {conf}")
+            #print(f"Detected {self.yolo_model.names[cls]} with confidence {conf}")
             label = f"{self.yolo_model.names[cls]}: {conf:.2f}"
             # Draw bounding box and label
             cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
